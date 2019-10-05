@@ -8,6 +8,8 @@
 MyButton::MyButton()
 {
 	m_clrTrans = RGB(255, 255, 255);
+	HCURSOR hCursor = LoadCursor(NULL, IDC_HAND);
+	SetCursor(hCursor);
 }
 
 
@@ -25,7 +27,8 @@ END_MESSAGE_MAP()
 void MyButton::OnMouseHover(UINT nFlags, CPoint point)
 {
 	// TODO: Add your message handler code here and/or call default
-
+	HCURSOR hCursor = LoadCursor(NULL, IDC_HAND);
+	SetCursor(hCursor);
 	this->LoadBitmaps(this->m_hoverBitmap, this->m_hoverBitmap, 0, this->m_hoverBitmap);
 	this->RedrawWindow();
 	OutputDebugString(L"\nonhover\n");
@@ -37,6 +40,9 @@ void MyButton::OnMouseHover(UINT nFlags, CPoint point)
 void MyButton::OnMouseMove(UINT nFlags, CPoint point)
 {
 	// TODO: Add your message handler code here and/or call default
+	HCURSOR hCursor = LoadCursor(NULL, IDC_HAND);
+	SetCursor(hCursor);
+
 	TRACKMOUSEEVENT tme;
 	tme.cbSize = sizeof(tme);
 	tme.hwndTrack = m_hWnd;
@@ -50,6 +56,8 @@ void MyButton::OnMouseMove(UINT nFlags, CPoint point)
 void MyButton::OnMouseLeave()
 {
 	// TODO: Add your message handler code here and/or call default
+	
+
 	this->LoadBitmaps(this->m_nomalBitmap, this->m_nomalBitmap, 0, this->m_nomalBitmap);
 	this->RedrawWindow();
 	CBitmapButton::OnMouseLeave();

@@ -13,6 +13,10 @@ MySettings::MySettings()
 	this->Facebook = L"https://www.facebook.com/nguyenhongphuc1998";
 	this->YouTube = L"https://www.facebook.com/nguyenhongphuc1998";
 
+	this->Banner = L"https://nguyenhongphuc98.github.io/banner";
+	this->Info = L"https://nguyenhongphuc98.github.io/info";
+	this->News = L"https://nguyenhongphuc98.github.io/news";
+
 	this->PatchInfo = new wchar_t[260];
 	this->NewLauncher = new wchar_t[260];
 	this->URL1 = new wchar_t[260];

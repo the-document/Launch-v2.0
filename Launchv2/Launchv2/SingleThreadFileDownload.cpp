@@ -119,7 +119,11 @@ bool SingleThreadFileDownload::TerminateDownload()
 	{
 		outInfo << downloadedBytes << L"\n" << lastModified;
 		if (outInfo.fail())
+		{
 			std::cout << "\nFailed to write file !\n";
+			MessageBoxA(NULL, "Failed to write file!", "ERROR", MB_OK);
+		}
+			
 		outInfo.close();
 		file.Flush();
 		return true;
@@ -453,6 +457,7 @@ InternetDownloadStatus SingleThreadFileDownload::CheckStatusAndReadData()
 	catch (...)
 	{
 		std::cout << "\nCannot write file. Maybe disk full ?\n";
+		MessageBoxA(NULL, "Cannot write file. Maybe disk full ?", "ERROR", MB_OK);
 	}
 	downloadedBytes += readedBytes;
 	returnResult.totalBytes = downloadSize;
@@ -478,6 +483,7 @@ bool SingleThreadFileDownload::SetupDownload()
 		if (file.Open((pathToFile), CFile::modeWrite | CFile::modeCreate | CFile::modeNoTruncate) == FALSE)
 		{
 			std::cout << "\nCannot open file for writing !\n";
+			MessageBoxA(NULL, "Cannot open file for writing !", "ERROR", MB_OK);
 			return false;
 		}
 	}
@@ -486,6 +492,7 @@ bool SingleThreadFileDownload::SetupDownload()
 		if (file.Open((pathToFile), CFile::modeWrite | CFile::modeCreate) == FALSE)
 		{
 			std::cout << "\nCannot open file for writing !\n";
+			MessageBoxA(NULL, "Cannot open file for writing !", "ERROR", MB_OK);
 			return false;
 		}
 	}

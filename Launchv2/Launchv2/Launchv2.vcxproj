@@ -231,6 +231,7 @@
     <ResourceCompile Include="Launchv2.rc" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="res\background-trans.png" />
     <Image Include="res\background.bmp" />
     <Image Include="res\clickStart.bmp" />
     <Image Include="res\close.bmp" />
@@ -242,6 +243,7 @@
     <Image Include="res\group_hover.bmp" />
     <Image Include="res\home.bmp" />
     <Image Include="res\home_nomal.bmp" />
+    <Image Include="res\icon1.ico" />
     <Image Include="res\Launchv2.ico" />
     <Image Include="res\minisize.bmp" />
     <Image Include="res\minisize_hover.bmp" />
@@ -251,6 +253,7 @@
     <Image Include="res\token.bmp" />
     <Image Include="res\token_hover.bmp" />
     <Image Include="res\trans.bmp" />
+    <Image Include="res\transbg.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

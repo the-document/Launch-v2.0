@@ -158,5 +158,14 @@
     <Image Include="res\trans.bmp">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="res\icon1.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\transbg.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\background-trans.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

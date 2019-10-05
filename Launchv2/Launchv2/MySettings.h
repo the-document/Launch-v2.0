@@ -18,6 +18,10 @@ public:
 	LPWSTR YouTube;
 	LPWSTR Facebook;
 
+	LPWSTR Banner;
+	LPWSTR News;
+	LPWSTR Info;
+
 	wchar_t* PatchInfo;
 	wchar_t* NewLauncher;
 	char* LoginServer;
